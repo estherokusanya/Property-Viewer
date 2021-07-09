@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=SignInController
+comment0.text=\n\ A\ class\ for\ controlling\ and\ maintain\ the\ sign\ in/\ sign\ up\ panel.\n\ A\ user\ can\ either\ sign\ up\ with\ a\ new\ username,\ or\ access\ his\ registered\ account\ by\ logging\ in\n\ No\ two\ users\ will\ have\ the\ same\ username.\n\n\ @author\ Siduduziwe\ Mswabuki\ (20075458),\ Boluwatife\ Okusanya\ (20029923),\ Anya\ Kazi\ (20010243),\ Harnit\ Kaur\ Palra\ (20015786)\ \n\ @version\ 06.04.2021\n
+comment1.params=
+comment1.target=java.lang.String\ getUsername()
+comment1.text=\n\ Accessor\ method\ the\ will\ return\ the\ username\n\ @return\ a\ string\ that\ will\ return\ the\ username\n
+comment2.params=
+comment2.target=java.lang.String\ getPassword()
+comment2.text=\n\ Accessor\ method\ the\ will\ return\ the\ password\n\ @return\ a\ string\ that\ will\ return\ the\ password\n
+comment3.params=event
+comment3.target=void\ signUpButtonClick(javafx.event.ActionEvent)
+comment3.text=\n\ Functionality\ for\ the\ sign\ up\ button.\n\ Checks\ if\ the\ username\ entered\ is\ unique.\n\ @param\ event\ (button\ click)\n
+comment4.params=event
+comment4.target=void\ signInButtonClick(javafx.event.ActionEvent)
+comment4.text=\n\ Funstionality\ for\ the\ sign\ in\ button.\n\ Checks\ if\ the\ username\ and\ password\ match\ with\ those\ exixting\ in\ the\ accounts\ registered.\n\ @param\ event\ (button\ click)\n
+comment5.params=
+comment5.target=boolean\ suFieldPresenceCheck()
+comment5.text=\n\ Method\ to\ check\ for\ empty\ fields\ while\ details\ are\ entered\ by\ the\ user.\n\ @return\ true\ if\ neither\ of\ the\ fields\ are\ empty,\ false\ if\ any\ one\ of\ the\ fields\ are\ empty\n
+comment6.params=username\ password
+comment6.target=boolean\ siFieldPresenceCheck(java.lang.String,\ java.lang.String)
+comment6.text=\n\ Method\ to\ check\ for\ empty\ fields\ while\ details\ are\ entered\ by\ the\ user.\n\ @param\ user's\ username\n\ @param\ user's\ password\n\ @return\ true\ is\ the\ username\ or\ password\ is\ not\ empty,\ false\ if\ either\ one\ (or\ both)\ are\ empty\n
+comment7.params=
+comment7.target=void\ invalidUsernameError()
+comment7.text=\n\ Invalid\ Username\ Dialog\n
+numComments=8

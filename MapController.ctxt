@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=MapController
+comment0.text=\n\ Contoller\ of\ the\ Map\ Panel.\n\n\ @author\ Siduduziwe\ Mswabuki\ (20075458),\ Boluwatife\ Okusanya\ (20029923),\ Anya\ Kazi\ (20010243),\ Harnit\ Kaur\ Palra\ (20015786)\ \n\ @version\ 06.04.2021\n
+comment1.params=url\ rb
+comment1.target=void\ initialize(java.net.URL,\ java.util.ResourceBundle)
+comment1.text=\n\ Loads\ and\ color\ codes\ the\ map.\ \n\ Places\ price\ range\ selected\ on\ screen.\n\ @param\ URL\ that\ will\ take\ in\ Statistics.fxml\n\ @param\ ResourceBundle\ that\ will\ take\ in\ rb\n
+comment2.params=borough
+comment2.target=int\ countOccurence(javafx.scene.shape.Polygon)
+comment2.text=\n\ Counts\ the\ number\ of\ properties\ within\ the\ user's\ price\ range\ in\ each\ of\ the\ boroughs\ \n\ @param\ the\ borough.\ Each\ borough\ in\ the\ GUI\ is\ represented\ by\ a\ polygon\ (hence\ type\ Polygon)\ \ \n\ @return\ the\ number\ of\ properties\ in\ each\ borough\ that\ are\ within\ the\ price\ range\n
+comment3.params=
+comment3.target=void\ colourChange()
+comment3.text=\n\ For\ each\ borough,\ the\ number\ of\ properties\ within\ the\ price\ range\ and\ the\ Polygon\ called\ borough\ is\ \n\ passed\ in\ the\ setColor()\ method\n
+comment4.params=count\ borough
+comment4.target=void\ setColor(int,\ javafx.scene.shape.Polygon)
+comment4.text=\n\ Depending\ on\ the\ number\ of\ properties,\ the\ colour\ of\ the\ polygon\ will\ change\n\ @param\ how\ many\ properties\ are\ in\ the\ borough\ and\ are\ within\ the\ user's\ price\ range\n\ @param\ the\ Polygon\ (the\ hexagonal\ shape)\n
+comment5.params=
+comment5.target=void\ loadMap()
+comment5.text=\n\ A\ hashmap\ that\ contains\ the\ name\ of\ the\ shape\ as\ the\ key\ and\ the\ corresponding\ borough\ name\ as\ the\ value\n
+comment6.params=event
+comment6.target=void\ boroughClick(javafx.scene.input.MouseEvent)
+comment6.text=\n\ When\ the\ borough\ is\ clicked,\ the\ property\ listing\ opens\n\ @param\ the\ event\ -\ when\ the\ user\ clicks\ on\ the\ borough\n
+numComments=7

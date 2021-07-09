@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=AccountInfo
+comment0.text=\n\ Stores\ the\ accessor\ methods\ for\ all\ the\ account\ holder's\ information\ that\ was\ entered\ during\ sign\ up\n\ this\ is\ including\ their\ firstname,\ surname,\ username\ and\ password\n\n\ @author\ Siduduziwe\ Mswabuki\ (20075458),\ Boluwatife\ Okusanya\ (20029923),\ Anya\ Kazi\ (20010243),\ Harnit\ Kaur\ Palra\ (20015786)\ \n\ @version\ 06.04.2021\n
+comment1.params=fName\ surname\ username\ password
+comment1.target=AccountInfo(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ AccountInfo\n\ @param\ the\ firstname,\ surname,\ username\ and\ password,\ all\ as\ Strings\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=\n\ Accessor\ method\ that\ returns\ the\ firstname\ of\ the\ account\ holder/user\n\ @return\ the\ firstname\ of\ the\ account\ holder/user\n
+comment3.params=
+comment3.target=java.lang.String\ getSurname()
+comment3.text=\n\ Accessor\ method\ that\ returns\ the\ surname\ of\ the\ account\ holder/user\n\ @return\ the\ surname\ of\ the\ account\ holder/user\n
+comment4.params=
+comment4.target=java.lang.String\ getUsername()
+comment4.text=\n\ Accessor\ method\ that\ returns\ the\ username\ of\ the\ account\ holder/user\n\ @return\ the\ username\ of\ the\ account\ holder/user\n
+comment5.params=
+comment5.target=java.lang.String\ getPassword()
+comment5.text=\n\ Accessor\ method\ that\ returns\ the\ password\ of\ the\ account\ holder/user\n\ @return\ the\ password\ of\ the\ account\ holder/user\n
+numComments=6

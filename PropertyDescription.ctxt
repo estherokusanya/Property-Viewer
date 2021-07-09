@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=PropertyDescription
+comment0.text=\n\ A\ class\ that\ Controls\ the\ functionality\ of\ the\ Property\ description\ window.\n\ It\ involves\ favouriting\ of\ properties.\n\n\ @author\ Siduduziwe\ Mswabuki\ (20075458),\ Boluwatife\ Okusanya\ (20029923),\ Anya\ Kazi\ (20010243),\ Harnit\ Kaur\ Palra\ (20015786)\ \n\ @version\ 06.04.2021\n
+comment1.params=url\ rb
+comment1.target=void\ initialize(java.net.URL,\ java.util.ResourceBundle)
+comment1.text=\nInitialize\ all\ the\ variables\ and\ sets\ labels.\n\n\ @param\ URL\ that\ will\ take\ in\ fxml\ file\n\ @param\ ResourceBundle\ that\ will\ take\ in\ rb\n
+comment2.params=event
+comment2.target=void\ goToSite(javafx.scene.input.MouseEvent)
+comment2.text=\n\ When\ the\ hyperlink\ is\ clicked,\ get\ the\ text\ and\ go\ to\ that\ link\ using\ the\ default\ browser\ on\ the\ desktop\ \n
+comment3.params=event
+comment3.target=void\ favouriteButtonClick(javafx.event.ActionEvent)
+comment3.text=\n\ Change\ favourite\ status\ when\ the\ favourite\ button\ is\ clicked\n\ @param\ event\ (button\ click)\n
+comment4.params=
+comment4.target=void\ setFavouriteStatus()
+comment4.text=\n\ Sets\ the\ text\ on\ the\ favourite\ label\ and\ button\ according\ to\ whether\ or\ not\n\ the\ property\ is\ the\ list\ of\ the\ users\ favourites.\n
+numComments=5

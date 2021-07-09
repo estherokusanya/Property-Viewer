@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1054.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MapController">
+   <top>
+      <GridPane prefHeight="68.0" prefWidth="1054.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <FlowPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="353.0" text="Property Viewer" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Arial Black" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </FlowPane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label text="From:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <StackPane>
+                     <children>
+                        <ChoiceBox fx:id="fromBox" disable="true" prefHeight="27.0" prefWidth="100.0" />
+                        <Label fx:id="fromPriceLabel" prefHeight="18.0" prefWidth="50.0" text="Label" textAlignment="CENTER" textFill="#000000b2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <Label text="To:">
+                     <font>
+                        <Font name="Montserrat Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <StackPane>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <ChoiceBox fx:id="toBox" disable="true" prefHeight="27.0" prefWidth="100.0" />
+                        <Label fx:id="toPriceLabel" text="Label" textFill="#000000b3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </HBox>
+            <Separator prefWidth="200.0" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <Button fx:id="logInOutButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#logInOutButtonClick" text="Log Out" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="637.0" prefWidth="658.0" BorderPane.alignment="BOTTOM_RIGHT">
+         <children>
+            <Polygon fx:id="barnBor" fill="#ededed" layoutX="319.0" layoutY="162.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="302.5" layoutY="153.5" mouseTransparent="true" text="BARN" />
+            <Polygon fx:id="brenBor" fill="#ededed" layoutX="281.0" layoutY="227.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="265.0" layoutY="218.5" mouseTransparent="true" text="BREN" />
+            <Polygon fx:id="hrgyBor" fill="#ededed" layoutX="394.0" layoutY="163.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="377.0" layoutY="154.5" mouseTransparent="true" text="HRGY" />
+            <Polygon fx:id="hackBor" fill="#ededed" layoutX="506.0" layoutY="229.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="489.0" layoutY="220.5" mouseTransparent="true" text="HACK" />
+            <Polygon fx:id="waltBor" fill="#ededed" layoutX="469.0" layoutY="164.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="451.5" layoutY="155.5" mouseTransparent="true" text="WALT" />
+            <Polygon fx:id="enfBor" fill="#ededed" layoutX="432.0" layoutY="98.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label blendMode="DARKEN" layoutX="420.5" layoutY="89.5" mouseTransparent="true" text="ENF" />
+            <Polygon fx:id="isliBor" fill="#ededed" layoutX="431.0" layoutY="229.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="421.0" layoutY="220.5" mouseTransparent="true" text="ISLI" />
+            <Polygon fx:id="camdBor" fill="#ededed" layoutX="356.0" layoutY="228.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="337.5" layoutY="219.5" mouseTransparent="true" text="CAMD" />
+            <Polygon fx:id="wandBor" fill="#ededed" layoutX="355.0" layoutY="359.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="336.0" layoutY="350.5" mouseTransparent="true" text="WAND" />
+            <Polygon fx:id="mertBor" fill="#ededed" layoutX="317.0" layoutY="424.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="300.5" layoutY="415.5" mouseTransparent="true" text="MERT" />
+            <Polygon fx:id="cityBor" fill="#ededed" layoutX="430.0" layoutY="359.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="416.5" layoutY="350.5" mouseTransparent="true" text="CITY" />
+            <Polygon fx:id="lewsBor" fill="#ededed" layoutX="542.0" layoutY="424.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="525.0" layoutY="415.5" mouseTransparent="true" text="LEWS" />
+            <Polygon fx:id="gwchBor" fill="#ededed" layoutX="505.0" layoutY="359.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="485.5" layoutY="350.5" mouseTransparent="true" text="GWCH" />
+            <Polygon fx:id="towhBor" fill="#ededed" layoutX="468.0" layoutY="294.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="449.0" layoutY="285.5" mouseTransparent="true" text="TOWH" />
+            <Polygon fx:id="sthwBor" fill="#ededed" layoutX="467.0" layoutY="424.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="449.0" layoutY="415.5" mouseTransparent="true" text="STHW" />
+            <Polygon fx:id="lambBor" fill="#ededed" layoutX="392.0" layoutY="424.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="375.0" layoutY="415.5" mouseTransparent="true" text="LAMB" />
+            <Polygon fx:id="wstmBor" fill="#ededed" layoutX="393.0" layoutY="294.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="374.0" layoutY="285.5" mouseTransparent="true" text="WSTM" />
+            <Polygon fx:id="bexlBor" fill="#ededed" layoutX="580.0" layoutY="359.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="565.0" layoutY="350.5" mouseTransparent="true" text="BEXL" />
+            <Polygon fx:id="newhBor" fill="#ededed" layoutX="543.0" layoutY="294.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="524.5" layoutY="285.5" mouseTransparent="true" text="NEWH" />
+            <Polygon fx:id="barkBor" fill="#ededed" layoutX="618.0" layoutY="294.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="602.0" layoutY="285.5" mouseTransparent="true" text="BARK" />
+            <Polygon fx:id="haveBor" fill="#ededed" layoutX="656.0" layoutY="229.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="639.5" layoutY="220.5" mouseTransparent="true" text="HAVE" />
+            <Polygon fx:id="redbBor" fill="#ededed" layoutX="581.0" layoutY="229.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="565.0" layoutY="220.5" mouseTransparent="true" text="REDB" />
+            <Polygon fx:id="croyBor" fill="#ededed" layoutX="429.0" layoutY="489.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="412.0" layoutY="480.5" mouseTransparent="true" text="CROY" />
+            <Polygon fx:id="bromBor" fill="#ededed" layoutX="504.0" layoutY="489.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="486.0" layoutY="480.5" mouseTransparent="true" text="BROM" />
+            <Polygon fx:id="hillBor" fill="#ededed" layoutX="168.0" layoutY="291.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="155.0" layoutY="282.5" mouseTransparent="true" text="HILL" />
+            <Polygon fx:id="suttBor" fill="#ededed" layoutX="354.0" layoutY="489.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="338.0" layoutY="480.5" mouseTransparent="true" text="SUTT" />
+            <Polygon fx:id="hammBor" fill="#ededed" layoutX="280.0" layoutY="358.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="260.5" layoutY="349.5" mouseTransparent="true" text="HAMM" />
+            <Polygon fx:id="hounBor" fill="#ededed" layoutX="205.0" layoutY="357.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="186.5" layoutY="348.5" mouseTransparent="true" text="HOUN" />
+            <Polygon fx:id="hrrwBor" fill="#ededed" layoutX="206.0" layoutY="226.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="187.5" layoutY="217.5" mouseTransparent="true" text="HRRW" />
+            <Polygon fx:id="richBor" fill="#ededed" layoutX="242.0" layoutY="423.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="227.5" layoutY="414.5" mouseTransparent="true" text="RICH" />
+            <Polygon fx:id="kingBor" fill="#ededed" layoutX="279.0" layoutY="489.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="264.5" layoutY="480.5" mouseTransparent="true" text="KING" />
+            <Polygon fx:id="kensBor" fill="#ededed" layoutX="318.0" layoutY="293.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="302.0" layoutY="284.5" mouseTransparent="true" text="KENS" />
+            <Polygon fx:id="ealiBor" fill="#ededed" layoutX="243.0" layoutY="292.0" onMouseClicked="#boroughClick" scaleX="0.72" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="60.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="30.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-30.0" />
+               </points>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Label layoutX="230.5" layoutY="283.5" mouseTransparent="true" text="EALI" />
+         </children>
+         <BorderPane.margin>
+            <Insets right="50.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <GridPane prefHeight="45.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Separator prefWidth="200.0" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.valignment="TOP" />
+            <Button minHeight="20.0" mnemonicParsing="false" onAction="#toWelcomeWindow" prefWidth="50.0" text="&lt;">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#toStatisticsPane" prefHeight="20.0" prefWidth="50.0" text="&gt;" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="30.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+            <Button mnemonicParsing="false" onAction="#viewFavClick" text="View Favourites" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </bottom>
+   <right>
+      <VBox prefHeight="587.0" prefWidth="185.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Circle fill="#ededed" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label text="0 Properties">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Circle fill="#81f89e" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label text="1+ Properties">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Circle fill="#ffef5e" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label text="200+ Properties">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Circle fill="#ff902c" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label text="500+ Properties">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Circle fill="#ff454a" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label text="1000+ Properties">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="50.0" />
+         </BorderPane.margin></VBox>
+   </right>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

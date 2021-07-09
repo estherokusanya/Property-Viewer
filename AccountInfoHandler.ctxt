@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=AccountInfoHandler
+comment0.text=\n\ Loads\ the\ account\ information\ from\ the\ CSV\ file\n\n\ @author\ Siduduziwe\ Mswabuki\ (20075458),\ Boluwatife\ Okusanya\ (20029923),\ Anya\ Kazi\ (20010243),\ Harnit\ Kaur\ Palra\ (20015786)\ \n\ @version\ 06.04.2021\n
+comment1.params=
+comment1.target=AccountInfoHandler()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ AccountInfoLoader\n
+comment2.params=
+comment2.target=void\ load()
+comment2.text=\n\ Loads\ all\ the\ account\ information\ including\ firstname,\ surname,\ username\ and\ password\ \n
+comment3.params=acc
+comment3.target=void\ csvWrite(AccountInfo)
+comment3.text=\n\ Write\ sign\ up\ account\ inomation\ to\ the\ csv\ file.\n\ @param\ acc\ Account\ infomation\ \n
+comment4.params=
+comment4.target=java.util.HashMap\ getUandP()
+comment4.text=\n\ returns\ the\ user's\ username\ and\ password\n\ @return\ user's\ username\ and\ password\n
+comment5.params=username
+comment5.target=boolean\ userExists(java.lang.String)
+comment5.text=\n\ Checks\ whether\ the\ username\ exists\ in\ the\ accounts\ CSV\ file\n\ @return\ true\ if\ the\ username\ does\ exist\ in\ the\ CSV\ file,\ false\ if\ it\ does\ not\ exist\n
+comment6.params=username\ password
+comment6.target=boolean\ passwordMatch(java.lang.String,\ java.lang.String)
+comment6.text=\n\ Checks\ whether\ the\ username\ matches\ the\ corresponding\ password\ stored\ on\ the\ CSV\ file\n\ @return\ true\ if\ the\ password\ matches\ the\ username\ stored\ on\ the\ CSV\ file,\ false\ if\ it\ does\ not\n
+comment7.params=username
+comment7.target=java.lang.String\ getFirstName(java.lang.String)
+comment7.text=\n\ @return\ the\ firstname\ of\ the\ user,\ or\ null\n
+numComments=8

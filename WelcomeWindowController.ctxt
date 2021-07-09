@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=WelcomeWindowController
+comment0.text=\n\ The\ functionality\ for\ the\ welcomeWindow\ panel\n\n\ @author\ Siduduziwe\ Mswabuki\ (20075458),\ Boluwatife\ Okusanya\ (20029923),\ Anya\ Kazi\ (20010243),\ Harnit\ Kaur\ Palra\ (20015786)\ \n\ @version\ 06.04.2021\n
+comment1.params=url\ rb
+comment1.target=void\ initialize(java.net.URL,\ java.util.ResourceBundle)
+comment1.text=\n\ Initialise\ all\ variables\n\ @param\ URL\ that\ will\ take\ in\ welcomeWindow.fxml\n\ @param\ ResourceBundle\ that\ will\ take\ in\ rb\n
+comment2.params=event
+comment2.target=void\ onEnterClick(javafx.event.ActionEvent)
+comment2.text=\n\ When\ the\ user\ chooses\ a\ range\ (toPrice\ and\ fromPrice),\ this\ method\ is\ invoked\n\ @param\ event\ (on\ enter\ click)\n
+comment3.params=event
+comment3.target=void\ fromPriceSelect(javafx.event.ActionEvent)
+comment4.params=event
+comment4.target=void\ toPriceSelect(javafx.event.ActionEvent)
+comment5.params=
+comment5.target=boolean\ checkPrices()
+comment5.text=\n\ Checks\ to\ see\ whether\ user\ input\ is\ valid\n\ @return\ true\ is\ input\ is\ valid,\ false\ if\ input\ is\ not\ valid\ (i.e.\ executes\ the\ 'if'\ or\ 'else\ if'\ branch)\n
+comment6.params=text
+comment6.target=void\ setNameInTitle(java.lang.String)
+comment6.text=\n\ Sets\ the\ welcome\ statement\ to\ the\ greeting\ plus\ the\ text\ passed\ into\ the\ parameter\n\ @param\ text\ (the\ name)\n
+numComments=7

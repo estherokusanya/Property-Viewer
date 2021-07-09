@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PropertiesWindow">
+   <center>
+      <TableView fx:id="propertiesList" onMouseClicked="#propertyClicked" prefHeight="438.0" prefWidth="710.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colHostName" editable="false" prefWidth="131.0" text="Host Name" />
+          <TableColumn fx:id="colPrice" editable="false" prefWidth="132.0" text="Price" />
+            <TableColumn fx:id="colReviews" editable="false" prefWidth="121.0" text="Number of reviews" />
+            <TableColumn fx:id="colMinNights" editable="false" prefWidth="123.0" text="Minimum Nights" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <GridPane prefHeight="58.0" prefWidth="710.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="514.1528625488281" minWidth="10.0" prefWidth="256.23875427246094" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="514.1528625488281" minWidth="10.0" prefWidth="214.76124572753906" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.1081237792969" minWidth="10.0" prefWidth="257.8104248046875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="sortBox" onAction="#sortBy" prefWidth="150.0" promptText="Sort By" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Price: Ascending" />
+                     <String fx:value="Price: Descending" />
+                     <String fx:value="Number of Reviews" />
+                     <String fx:value="Host Name" />
+                  </FXCollections>
+               </items>
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>
